@@ -40,3 +40,8 @@ show-intresult { 0x10 -bAND 0x110 }, { 0xf -bOR 0x8 }, { 0xF -bXOR 0xc },{ -bNOT
 'aaabbbccc' -match '(b+)(?<someCs>\w+)'
 
 $matches
+
+
+1,2,3,4 -contains 3
+
+4 -in 2..8
