@@ -19,6 +19,7 @@ $someone = 'World'
 
 # Array
 @(1,2,3)
+'a', 'b', 'c'
 
 # Hashtable
 @{
@@ -38,5 +39,5 @@ $null = [datetime], [string]
     When = [datetime] '2017-12-17 11:30'
 }
 
-# scriptblock - lambda function
+# scriptblock - lambda function evaluated by '&' operator
 { 1 + 1 }
