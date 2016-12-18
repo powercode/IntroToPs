@@ -58,5 +58,6 @@ $a[-2,-1]
 $a[0..2]
 
 $(SubExpression)
+
 $var = 'Nice'
 "$var $(1,2,3 -join ';')"
