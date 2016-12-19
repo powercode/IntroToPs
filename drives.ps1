@@ -6,7 +6,7 @@ Get-Item ~/.gitconfig
 
 Get-ChildItem # gci
 
-Get-ChildItem $env:TNT_ROOT -Depth 2 -file | Where-Object Name -match ^a
+Get-ChildItem $env:TNT_ROOT -Depth 2 -file -Include a* | Where-Object Name -match ^a
 
 $function:ExtendHistoryInfo
 

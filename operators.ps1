@@ -48,6 +48,10 @@ $matches.someCs
 # in
 4 -in 2..8
 
+$i = 1
+$i += 2
+$i % 2
+$i / 3
 
 # join
 
