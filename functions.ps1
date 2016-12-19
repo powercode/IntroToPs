@@ -1,19 +1,25 @@
-function script:somefunction {
-	"I write my $($args.count) args to the pipeline: $args"
+
+
+function Get-Stuff {
+	"I write my $($args.count) args to the pipeline:"
+	$args
 }
 
-function Verb-Noun {
-	[CmdletBinding()]
-	param (
 
-	)
-
-	begin {
+function Get-NameAge($name, $age) {
+	[pscustomobject] @{
+		Name = $name
+		Age = $age
 	}
+	"I write my $($args.count) args to the pipeline:"
+	$args
+}
 
-	process {
+function Get-NameAge1($name, $age) {
+	[pscustomobject] @{
+		Name = $name
+		Age = $age
 	}
-
-	end {
-	}
+	"I write my $($args.count) args to the pipeline:"
+	return $args
 }

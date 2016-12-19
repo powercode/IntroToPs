@@ -1,5 +1,5 @@
 Write-Output 'This goes to the pipeline'
-Write-Error -Message 'Oops' -Category InvalidArgument -TargetObject 47
+Write-Error -Message 'Oops' -Category InvalidArgument -TargetObject  @{ Value = 47; WasItChineseNewYear = $false}
 Write-Warning 'You shouldn''t run with scissors'
 Write-Debug 'Intended for the developers of the scripts'
 Write-Verbose 'Intended for the advanced user of the script'

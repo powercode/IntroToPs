@@ -11,18 +11,17 @@ function show-intresult([scriptblock[]]$sb) {
     }
 }
 
-show-result { 10 -eq 10}
+show-result { 10 -eq 10 }
 
 show-result { 10 -ne 10 }
 
 show-result { 5 -gt 10 }
 
-show-result { 5 -gt "6" }
+show-result { 7 -gt "6" }
 
 show-result { "abc" -gt "bcd" }
 
 show-result { 11 -ge 10 }
-
 
 
 #logical
@@ -37,11 +36,25 @@ show-intresult { 0x10 -bAND 0x110 }, { 0xf -bOR 0x8 }, { 0xF -bXOR 0xc },{ -bNOT
 
 
 # -match, -notmatch, -like, -notlike
-'aaabbbccc' -match '(b+)(?<someCs>\w+)'
-
+'aaabbbccc' -match '(?<B>b+)(?<someCs>\w+)'
 $matches
+$matches.someCs
 
+'aaabc' -like '*bc'
 
+# contains
 1,2,3,4 -contains 3
 
+# in
 4 -in 2..8
+
+
+# join
+
+(Get-ChildItem).Name  -join ', '
+
+#replace
+(Get-ChildItem).Name  -creplace 'function', 'Functi0n'
+
+
+
